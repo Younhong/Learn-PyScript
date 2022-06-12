@@ -9,13 +9,23 @@
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <title>Pyscript Demo</title>
+    <py-env>
+        - numpy
+    </py-env>
 </head>
 
 <body>
-    <py-script>
-        name = 'Brad'
-        print(name)
-    </py-script>
+    <main class="container h-screen flex flex-col items-center justify-center">
+        <div id="output" class="text-3xl"></div>
+        <button id="shuffle" class="mt-4 p-2 text-white bg-blue-600 rounded" pys-onClick="shuffle_array">Shuffle</button>
+    </main>
+
+    <!-- <div id="output2" class="text-3xl"></div>
+    <div id="output3" class="text-3xl"></div> -->
+
+    <py-script src="./main.py"></py-script>
+
+    <!-- <py-repl></py-repl> -->
 </body>
 
 </html>
